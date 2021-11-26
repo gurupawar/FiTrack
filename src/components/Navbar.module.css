@@ -1,0 +1,17 @@
+.navbar {
+  border-top: 4px solid #6246ea;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li + li {
+  margin-left: 2rem;
+}

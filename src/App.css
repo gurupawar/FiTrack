@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+ul,
+ol {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ============================================ Global Style */
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  padding: 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  border-radius: 4px;
+  background-color: transparent;
+  transition: 0.2s ease-in;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.051);
+}
+
+.btn-secondary {
+  background: #6246ea;
+  border: 1px solid #6246ea;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #553cce;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ================================================== Login and Signp Style  */
+.login {
+  max-width: 416px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.login__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__header p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.login__header .Link {
+  display: flex;
+  align-items: center;
+}
+.login__header img {
+  width: 30px;
+}
+.login__header p a {
+  color: #6246ea;
+}
+.login__header p a:hover {
+  text-decoration: underline;
+}
+
+.login__body {
+  margin-top: 1.5rem;
+  border: 2px solid #212121;
+  box-shadow: 4px 4px 0px #212121;
+  border-radius: 8px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__body > span {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.login__form {
+  margin-top: 2rem;
+  width: 100%;
+}
+.login__form label {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.login__form label > span {
+  font-size: 12.5px;
+  color: rgb(102, 102, 102);
+}
+.login__form label > input {
+  border: 0;
+  font-size: 15px;
+}
+
+.login__form label > input:focus-visible {
+  outline: none;
+}
+
+.login__form label > input {
+  background-color: transparent;
+}
+
+.login__form-bottom {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__form-bottom .forgot {
+  font-size: 14px;
+  color: #6246ea;
+}
+.bottom__message {
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: a;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.bottom__message > span {
+  color: #6246ea;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.error-message {
+  color: red;
+  font-size: 13px;
+}
+/* ================================================== Loader Spinner  */
+/* .loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #6246ea;
+  width: 18px;
+  height: 18px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* =============================================== Media Query */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
