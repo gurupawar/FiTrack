@@ -2,14 +2,16 @@ import { useState } from "react";
 import styles from "./Login.module.css";
 import arrow from "../../assets/arrow.svg";
 import { Link } from "react-router-dom";
+import { useLogin } from "../../hooks/useLogin";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { login, isPending, error } = useLogin();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    login(email, password);
   };
   return (
     <div className="login">
@@ -43,11 +45,19 @@ export default function Login() {
               required
             />
           </label>
+          {error && <span className="error-message">{error}</span>}
           <div className="login__form-bottom">
             <Link to="/" className={styles.forgot}>
               Forgot Password
             </Link>
-            <button className="btn btn-secondary">Log in</button>
+            {!isPending && (
+              <button className="btn btn-secondary">Log in</button>
+            )}
+            {isPending && (
+              <button className="btn btn-secondary" disabled>
+                Loading
+              </button>
+            )}
           </div>
           <Link to="/signup" className="bottom__message">
             Don’t have an account? <span>Signup Now</span>
